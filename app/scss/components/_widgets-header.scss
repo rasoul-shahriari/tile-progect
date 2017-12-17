@@ -1,0 +1,35 @@
+.widget-header {
+  margin-bottom: rem(80);
+  padding: rem(42);
+  text-align: center;
+
+  &__title {
+    margin: 0 0 rem(20);
+    font-weight: bold;
+    font-size: rem(36);
+  }
+
+  &__img {
+    height: rem(20);
+  }
+}
+
+.widget-header--1 {
+  @include widget-header-gradiant($color-red);
+}
+
+.widget-header--2 {
+  @include widget-header-gradiant($color-orange);
+}
+
+.widget-header--3 {
+  @include widget-header-gradiant($color-yellow);
+}
+
+.widget-header--4 {
+  @include widget-header-gradiant($color-green);
+}
+
+.widget-header--5 {
+  @include widget-header-gradiant($color-dark-green);
+}

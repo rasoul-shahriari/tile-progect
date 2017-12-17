@@ -1,0 +1,31 @@
+@mixin widget-color($color) {
+  background: rgba($color, .5);
+
+  &:hover {
+    background: rgba($color, .2);
+
+    &:after {
+      border: 2px solid $color;
+    }
+
+    .widget__link {
+      border: 2px solid $color;
+      background: rgba($color, .1);
+      color: $color;
+    }
+  }
+}
+
+@mixin stars-animation($speed, $delay) {
+  animation: load $speed + ms $delay + ms;
+  animation-fill-mode: both;
+}
+
+@mixin widget-header-gradiant($color) {
+  background: linear-gradient(to top, lighten($color, 80%) 0%, lighten($color, 20%) 55%);
+}
+
+@function rem($px-width) {
+  $calculated: $px-width / $base-font-size;
+  @return $calculated + rem;
+}
